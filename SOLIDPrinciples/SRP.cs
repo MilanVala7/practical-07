@@ -17,23 +17,27 @@ internal class Order
 
 class OrderService
 {
-    // Summary: 
-    // Purpose: Handle order processing workflow
-    // Return type: void
+    /// <summary>
+    /// Purpose: Handle order processing workflow
+    /// Return type: void
+    /// </summary>
+    /// <param name="or">Order Object to be proccessed</param>
     public void Process(Order or)
     {
-        Console.WriteLine("Processing Order ");
+        Console.WriteLine($"Processing Order {or.Id}");
     }
 }
 
 class OredrRepository
 {
-    // Summary:
-    // Purpose: Saves order to database.
-    // Return Type: void
+    /// <summary>
+    /// Purpose: Saves order to database.
+    /// Return Type: void
+    /// </summary>
+    /// <param name="or">Order Object to be saved</param>
     public void Save(Order or)
     {
-        Console.WriteLine("Order saved to database.");
+        Console.WriteLine($"Order {or.Id} saved to database.");
     }
 }
 
@@ -44,7 +48,7 @@ class InvoiceGenerator
     // Return Type: void
     public void Generate(Order or)
     {
-        Console.WriteLine("Invoice generated.");
+        Console.WriteLine($"Invoice generated for Order {or.Id} with amount {or.Amount}.");
     }
 }
 
